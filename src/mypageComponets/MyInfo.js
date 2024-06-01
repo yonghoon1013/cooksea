@@ -89,7 +89,7 @@ function MyInfo() {
                 </div>
 
                 <div className='flex-1 ml-5'>
-                    <h3 className='text-2xl'>정용훈님</h3>
+                    <h3 className='text-2xl'>{myInfo.data.data.nick}</h3>
                     <div className='flex'>
                         <span>{`${myInfo.data.data.intro ? myInfo.data.data.intro : "한줄소개를 등록해주세요"}`}</span>
                         <img className={`ml-3 cursor-pointer`} src={pen} onClick={()=>{profieIntroToggle(!profieIntro)}}></img>
