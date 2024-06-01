@@ -43,4 +43,8 @@ export const Store = create((set, get) => ({
     profieIntroToggle(bool){
         set({profieIntro : bool})
     },
+    myInfoZu:null,
+    setMyInfoZu(i){
+        set({myInfoZu : i})
+    },
 }))

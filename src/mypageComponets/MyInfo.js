@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 
 import cook from '../asset/imgs/cook-img.jpg'
@@ -22,7 +22,7 @@ import IntroWrite from './IntroWrite'
 
 function MyInfo() {
 
-    const { userGet, user, profileImgBoxToggle, imgBoxToggle, profieIntro, profieIntroToggle } = Store();
+    const { userGet, user, profileImgBoxToggle, imgBoxToggle, profieIntro, profieIntroToggle, setMyInfoZu } = Store();
     const { profileDefault, camera } = ImgStore();
 
 
@@ -60,6 +60,11 @@ function MyInfo() {
     const myInfo  = useQuery(['myInfo', user ? user.key : ""], myInfoGet, {
         refetchOnWindowFocus: false,
     });
+
+
+    useEffect(()=>{
+        setMyInfoZu(myInfo)
+    },[myInfo.data])
 
 
 

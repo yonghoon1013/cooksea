@@ -6,7 +6,7 @@ import { useMutation, useQuery, useQueryClient } from 'react-query';
 
 
 function ProfileImgWrite() {
-    const { userGet, user, profileImgBoxToggle, imgBoxToggle } = Store();
+    const { userGet, user, profileImgBoxToggle, imgBoxToggle, myInfoZu } = Store();
     const { profileDefault } = ImgStore();
     const queryClient = useQueryClient();
 
@@ -26,6 +26,8 @@ function ProfileImgWrite() {
         },
         refetchOnWindowFocus: false
     });
+
+
 
 
 
@@ -67,12 +69,13 @@ function ProfileImgWrite() {
 
     }
 
+
     return (
         <div className=' fixed top-0 left-0 w-full h-screen z-50 bg-black bg-opacity-50 '>
             <div className=' absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-full aspect-video lg:w-1/2'>
                 <form onSubmit={(e)=>{profileImgPost(e)}} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col'>
                     <div className=' w-28 mb-5 cursor-pointer' onClick={()=>{inputRef.current.click()}}>
-                        <img className='w-full aspect-square rounded-full object-cover' src={profilePreview ? profilePreview : profileDefault }></img>
+                        <img className='w-full aspect-square rounded-full object-cover' src={profilePreview ? profilePreview : ( myInfoZu?.data?.data?.profileImg?.path ? `${process.env.REACT_APP_SERVER_URL}/${myInfoZu.data.data.profileImg.path}` : profileDefault )  }></img>
                         <input ref={inputRef} className=' hidden' type='file' onChange={fileUpload}></input>
                     </div>
                     <div className='flex justify-between'>
