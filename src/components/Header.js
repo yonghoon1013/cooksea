@@ -88,7 +88,7 @@ function Header() {
                             </div>
                         </form>
                         <div>
-                            <Link to={'/mypage'} className='lg:hidden'> <img src={mypage}></img></Link>
+                            <Link to={'/mypage'} className='lg:hidden' onClick={(e)=>{if(!user){e.preventDefault(); alert("로그인이 필요합니다.")}}}><img src={mypage}></img></Link>
 
                             {
                                 loginCheck() ? <div className='hidden lg:block'>

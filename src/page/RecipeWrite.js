@@ -231,7 +231,7 @@ function RecipeWrite() {
                                         <option value="양식">양식</option>
                                         <option value="중식">중식</option>
                                         <option value="일식">일식</option>
-                                        <option value="일식">분식</option>
+                                        <option value="분식">분식</option>
                                         <option value="밑반찬">밑반찬</option>
                                         <option value="패스트푸드">패스트푸드</option>
                                         <option value="디저트">디저트</option>
