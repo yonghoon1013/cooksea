@@ -75,7 +75,7 @@ function ProfileImgWrite() {
             <div className=' absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-full aspect-video lg:w-1/2'>
                 <form onSubmit={(e)=>{profileImgPost(e)}} className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col'>
                     <div className=' w-28 mb-5 cursor-pointer' onClick={()=>{inputRef.current.click()}}>
-                        <img className='w-full aspect-square rounded-full object-cover' src={profilePreview ? profilePreview : ( myInfoZu?.data?.data?.profileImg?.path ? `${process.env.REACT_APP_SERVER_URL}/${myInfoZu.data.data.profileImg.path}` : profileDefault )  }></img>
+                        <img className='w-full aspect-square rounded-full object-cover' src={profilePreview ? profilePreview : ( myInfoZu?.data?.data?.profileImg?.path ? `${process.env.REACT_APP_SERVER_URL}/${myInfoZu.data.data.profileImg.path}` : profileDefault )} alt='프로필이미지'></img>
                         <input ref={inputRef} className=' hidden' type='file' onChange={fileUpload}></input>
                     </div>
                     <div className='flex justify-between'>

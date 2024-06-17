@@ -80,11 +80,11 @@ function MyInfo() {
             <div className='flex'>
                 <div className='w-1/5 relative' onClick={()=>{imgBoxToggle(!profileImgBoxToggle)}}>
                     <div className={`w-full aspect-square relative rounded-full overflow-hidden cursor-pointer`}>
-                        <img className={`w-full h-full object-cover`} src={`${ myInfo.data?.data?.profileImg?.path  ? `${process.env.REACT_APP_SERVER_URL}/${myInfo.data.data.profileImg.path}` : profileDefault }`}></img>
+                        <img className={`w-full h-full object-cover`} src={`${ myInfo.data?.data?.profileImg?.path  ? `${process.env.REACT_APP_SERVER_URL}/${myInfo.data.data.profileImg.path}` : profileDefault }`} alt='프로필이미지'></img>
                         <div className=' absolute top-1/2 -translate-y-1/2 w-full h-full justify-center items-center opacity-0 hidden hover:opacity-100 hover:bg-black hover:bg-opacity-50 lg:flex'><span className=' text-white'>사진등록</span></div>
                     </div>
                     <div className=' absolute -bottom-2 -right-2 lg:hidden'>
-                        <img src={camera}></img>
+                        <img src={camera} alt='모바일 프로필등록 아이콘'></img>
                     </div>
                 </div>
 
@@ -92,7 +92,7 @@ function MyInfo() {
                     <h3 className='text-2xl'>{myInfo.data.data.nick}</h3>
                     <div className='flex'>
                         <span>{`${myInfo.data.data.intro ? myInfo.data.data.intro : "한줄소개를 등록해주세요"}`}</span>
-                        <img className={`ml-3 cursor-pointer`} src={pen} onClick={()=>{profieIntroToggle(!profieIntro)}}></img>
+                        <img className={`ml-3 cursor-pointer`} src={pen} onClick={()=>{profieIntroToggle(!profieIntro)}} alt='한줄소개 등록 펜 아이콘'></img>
                     </div>
                 </div>
             </div>

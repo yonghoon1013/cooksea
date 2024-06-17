@@ -254,7 +254,7 @@ function RecipeWrite() {
 
                             <div className='w-full lg:w-1/5'>
                                 <div className='w-full aspect-square'>
-                                    <img className='w-full h-full object-cover' src={previewImg ? previewImg : imgPlus}></img>
+                                    <img className='w-full h-full object-cover' src={previewImg ? previewImg : imgPlus} alt='썸네일사진'></img>
                                 </div>
                                 <div className=' text-center'>
                                     <input className='hidden' type='file' id='upload' onChange={fileTest}></input>
@@ -308,7 +308,7 @@ function RecipeWrite() {
                             </Droppable>
 
                             <div className=' text-center mt-10'>
-                                <img src={plus} className='cursor-pointer w-8 inline-block' onClick={() => { rawAdd() }}></img>
+                                <img src={plus} className='cursor-pointer w-8 inline-block' onClick={() => { rawAdd() }} alt='플러스아이콘'></img>
                             </div>
                         </div>
 
@@ -330,7 +330,7 @@ function RecipeWrite() {
                                                                 <span>Step{index + 1}</span>
                                                                 <textarea className='w-full border border-black resize-none mx-5 mt-4 lg:mt-0' name={`${item.num}-text`} cols={30} rows={3}></textarea>
                                                                 <div className=' w-1/6 aspect-square mt-4 lg:mt-0 lg:mr-5' onClick={() => { hanCl(index) }}>
-                                                                    <img className='w-full h-full object-cover cursor-pointer' src={item.previewImg ? item.previewImg : imgPlus}></img>
+                                                                    <img className='w-full h-full object-cover cursor-pointer' src={item.previewImg ? item.previewImg : imgPlus} alt='조리순서 이미지'></img>
                                                                     <input ref={el => (inputRef.current[index] = el)} className='hidden' id={item.id} type='file' onChange={(e) => { oderFile(e, item.id) }}></input>
                                                                 </div>
                                                                 <button className='bg-orange-200 w-full p-1 rounded-md mt-4 lg:mt-0 lg:w-20' onClick={(e) => { oderDel(e, item.id) }}>삭제</button>
@@ -346,7 +346,7 @@ function RecipeWrite() {
 
                             </Droppable>
                             <div className=' text-center mt-10'>
-                                <img src={plus} className='cursor-pointer w-8 inline-block' onClick={() => { oderAdd() }}></img>
+                                <img src={plus} className='cursor-pointer w-8 inline-block' onClick={() => { oderAdd() }} alt='플러스아이콘'></img>
                             </div>
                         </div>
                         <div className='text-center'>

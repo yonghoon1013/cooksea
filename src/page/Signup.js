@@ -83,7 +83,7 @@ function Signup() {
 
     return (
         <div className='min-w-mobile max-w-login mx-auto px-2'>
-            <h2 className=' flex justify-center mt-10'><Link to={'/'}><img src={logo}></img></Link></h2>
+            <h2 className=' flex justify-center mt-10'><Link to={'/'}><img src={logo} alt='로고이미지'></img></Link></h2>
             <form onSubmit={(e) => { signupPost(e) }}>
                 <div className='flex flex-col my-3'>
                     <span className='mb-2'>아이디</span>

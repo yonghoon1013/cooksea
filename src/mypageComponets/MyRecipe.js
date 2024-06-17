@@ -28,7 +28,7 @@ function MyRecipe() {
             {test.map((item,index)=>(
                             <li className={`flex py-5 border-t border-black  px-3 lg:px-0 ${index === test.length - 1 ? "border-b" : ""}`}>
                             <div className='w-20 aspect-square'>
-                                <img className='w-full h-full object-cover' src={testImg}></img>
+                                <img className='w-full h-full object-cover' src={testImg} alt='레시피 이미지'></img>
                             </div>
             
                             <div className='flex flex-col flex-1 ml-5'>
@@ -36,11 +36,11 @@ function MyRecipe() {
                                 <span>{item.name}</span>
                                 <div className='flex'>
                                     <div className='flex'>
-                                        <img src={miniHeart}></img>
+                                        <img src={miniHeart} alt='좋아요아이콘'></img>
                                         <span className='mx-1'>23</span>
                                     </div>
                                     <div className='flex ml-3'>
-                                        <img src={talkIcon}></img>
+                                        <img src={talkIcon} alt='댓글아이콘'></img>
                                         <span className='mx-1'>12</span>
                                     </div>
                                 </div>

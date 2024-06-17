@@ -33,15 +33,15 @@ function Community() {
                             </div>
                             <div className='flex'>
                                 <div className='flex mr-2 lg:ml-2 lg:mr-0'>
-                                    <img src={likeIcon}></img>
+                                    <img src={likeIcon} alt='좋아요아이콘'></img>
                                     <span>15</span>
                                 </div>
                                 <div className='flex mr-2 lg:ml-2 lg:mr-0'>
-                                    <img src={talkIcon}></img>
+                                    <img src={talkIcon} alt='댓글아이콘'></img>
                                     <span>15</span>
                                 </div>
                                 <div className='flex mr-2 lg:ml-2 lg:mr-0'>
-                                    <img src={eyesIcon}></img>
+                                    <img src={eyesIcon} alt='조회수아이콘'></img>
                                     <span>15</span>
                                 </div>
                             </div>

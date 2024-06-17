@@ -251,15 +251,15 @@ function Detail() {
 
                     <div className='w-full lg:w-2/6'>
                         <div className='w-full aspect-square'>
-                            <img className='w-full h-full object-cover' src={`${process.env.REACT_APP_SERVER_URL}/${thumbnail.data.data.path}`}></img>
+                            <img className='w-full h-full object-cover' src={`${process.env.REACT_APP_SERVER_URL}/${thumbnail.data.data.path}`} alt='썸네일이미지'></img>
                         </div>
                         <div className='flex justify-center mt-4'>
                             <div className='flex w-auto p-2 bg-slate-300 mx-3 rounded-md cursor-pointer' onClick={() => { favUpdate() }}>
-                                <img src={favData.data ? favData.data.data.favValue ? redHeart : emptyHeart : ""}></img>
+                                <img src={favData.data ? favData.data.data.favValue ? redHeart : emptyHeart : ""} alt='찜하기아이콘'></img>
                                 <span className=''>찜하기</span>
                             </div>
                             <div className='flex w-auto p-2 bg-slate-300 mx-3 rounded-md cursor-pointer' onClick={() => { alert("준비중 입니다.") }}>
-                                <img src={share2}></img>
+                                <img src={share2} alt='공유하기아이콘'></img>
                                 <span>공유하기</span>
                             </div>
                         </div>
@@ -270,15 +270,15 @@ function Detail() {
                         <div className='my-2 pb-2 border-b border-black lg:my-0'>
                             <ul className='flex items-center justify-center lg:justify-normal'>
                                 <li className='flex mr-3'>
-                                    <img className='mr-1' src={eyesIcon}></img>
+                                    <img className='mr-1' src={eyesIcon} alt='조회수아이콘'></img>
                                     <span>{recipeDetail.data.data.view}</span>
                                 </li>
                                 <li className='flex mr-3'>
-                                    <img className='mr-1' src={heartIcon}></img>
+                                    <img className='mr-1' src={heartIcon} alt='즐겨찾기수아이콘'></img>
                                     <span>{favData.data ? favData.data.data.favLeng : ""}</span>
                                 </li>
                                 <li className='flex mr-3'>
-                                    <img className='mr-1' src={shareIcon}></img>
+                                    <img className='mr-1' src={shareIcon}alt='공유수 아이콘'></img>
                                     <span>10</span>
                                 </li>
                             </ul>
@@ -287,7 +287,7 @@ function Detail() {
                         <div className='my-3'>
                             <h3 className='text-xl font-bold mb-2'>작성자</h3>
                             <div className='flex'>
-                                <div className='w-12 aspect-square mr-3'><img className='w-full h-full rounded-full' src={`${ myInfo.data?.data?.profileImg?.path  ? `${process.env.REACT_APP_SERVER_URL}/${myInfo.data.data.profileImg.path}` : profileDefault }`}></img></div>
+                                <div className='w-12 aspect-square mr-3'><img className='w-full h-full rounded-full' src={`${ myInfo.data?.data?.profileImg?.path  ? `${process.env.REACT_APP_SERVER_URL}/${myInfo.data.data.profileImg.path}` : profileDefault }`}alt='프로필이미지'></img></div>
                                 <div className='flex flex-col'><span>{recipeDetail.data.data.userInfo.nick}</span><span>{myInfo.data.data.intro ? myInfo.data.data.intro : ""}</span></div>
                             </div>
                         </div>
@@ -305,7 +305,7 @@ function Detail() {
                             <div className='flex items-center'>
                                 <h3 className='text-xl font-bold my-2'>재료</h3>
                                 <div className='flex w-auto flex-1 ml-2'>
-                                    <img className='' src={mypage}></img>
+                                    <img className='' src={mypage} alt='사람아이콘'></img>
                                     <span className=''>{recipeDetail.data.data.people}인분</span>
                                 </div>
                             </div>
@@ -337,7 +337,7 @@ function Detail() {
                                     <div className='w-2/6 lg:w-1/4'>
                                         <div className='w-full aspect-square'>
                                             {stepImg.data && stepImg.data.data[index] && (
-                                                <img className='w-full h-full object-cover' src={`${process.env.REACT_APP_SERVER_URL}/${stepImg.data.data[index].path}`}></img>
+                                                <img className='w-full h-full object-cover' src={`${process.env.REACT_APP_SERVER_URL}/${stepImg.data.data[index].path}`} alt='조리순서 이미지'></img>
                                             )}
                                         </div>
                                     </div>

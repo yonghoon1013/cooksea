@@ -29,7 +29,7 @@ function Login() {
     return (
         <div className=''>
             <div className=' min-w-mobile max-w-login mx-auto px-2'>
-                <h2 className='pt-28 flex justify-center'><Link to={'/'}><img src={logo}></img></Link></h2>
+                <h2 className='pt-28 flex justify-center'><Link to={'/'}><img src={logo} alt='로고이미지'></img></Link></h2>
                 <form className='flex flex-col' onSubmit={(e)=>{loginGet(e)}}>
                     <div className='flex flex-col mt-10 mb-5'>
                         <input className='border border-b-slate-400 p-3' type='text' name='id' placeholder='아이디'></input>

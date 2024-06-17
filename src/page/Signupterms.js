@@ -79,7 +79,7 @@ function Signupterms() {
 
     return (
         <form className='min-w-mobile max-w-login mx-auto px-2' onSubmit={()=>{navigate('/signup')}}>
-            <h2 className='mb-10 flex justify-center mt-10'><Link to={'/'}><img src={logo}></img></Link></h2>
+            <h2 className='mb-10 flex justify-center mt-10'><Link to={'/'}><img src={logo} alt='로고이미지'></img></Link></h2>
             <div>
                 <input className='hidden' type='checkbox' id='1' checked={all} onChange={(e) => { allCheckUpdate(e) }} ></input>
                 <label className={`relative pl-10 flex items-center cursor-pointer  ${all ? 'before:bg-checked' : 'before:bg-unchecked'} before:inline-block before:w-9 before:h-9 before:bg-no-repeat before:absolute before:left-0`} htmlFor='1' >
